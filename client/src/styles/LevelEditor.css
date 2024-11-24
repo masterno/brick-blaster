@@ -1,0 +1,105 @@
+.level-editor {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.editor-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.brick-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.brick-selector button {
+  padding: 10px;
+  border: 2px solid #333;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.brick-selector button.selected {
+  border-color: #fff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.level-settings {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.level-settings label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.level-settings input {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.grid-container {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.grid-row {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 5px;
+}
+
+.grid-cell {
+  width: 60px;
+  height: 20px;
+  border: 1px solid #444;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.grid-cell:hover {
+  transform: scale(1.05);
+}
+
+.editor-actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.editor-actions button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #0095DD;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.editor-actions button:hover {
+  background-color: #0077b3;
+}
+
+.editor-actions button:last-child {
+  background-color: #666;
+}
+
+.editor-actions button:last-child:hover {
+  background-color: #555;
+}

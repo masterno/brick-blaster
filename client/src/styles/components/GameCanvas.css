@@ -1,0 +1,147 @@
+.game-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+}
+
+.canvas-wrapper {
+  position: relative;
+  width: 800px;
+  height: 600px;
+  border: 2px solid #00FF00;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.3),
+              inset 0 0 10px rgba(0, 255, 0, 0.2);
+  animation: borderPulse 2s infinite;
+}
+
+.game-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  outline: none;
+  border-radius: 6px;
+}
+
+.game-canvas:focus {
+  outline: none;
+}
+
+@media (max-width: 850px) {
+  .game-container {
+    padding: 1rem;
+  }
+
+  .canvas-wrapper {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4/3;
+  }
+
+  .game-canvas {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@keyframes borderPulse {
+  0% { border-color: #00ff00; }
+  50% { border-color: #008000; }
+  100% { border-color: #00ff00; }
+}
+
+/* Pause Menu Styles */
+.pause-menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 20px;
+  border-radius: 8px;
+  border: 2px solid #00ff00;
+  text-align: center;
+  color: #00ff00;
+  z-index: 100;
+}
+
+/* Game Over Screen Styles */
+.game-over-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+}
+
+.game-over {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #2c3e50;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
+
+.game-over h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #3498db;
+}
+
+.game-stats {
+  margin-bottom: 1.5rem;
+}
+
+.game-stats p {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.game-over-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.game-over-buttons button {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #3498db;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.game-over-buttons button:hover {
+  background-color: #2980b9;
+}
+
+/* HUD Styles */
+.hud {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #00ff00;
+  font-family: 'Courier New', monospace;
+  font-size: 16px;
+  text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+}
